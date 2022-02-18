@@ -63,7 +63,7 @@ export const TransactionProvider = ({ children }) => {
           ).toLocaleString(),
           message: transaction.message,
           keyword: transaction.keyword,
-          amount: parseInt(transaction.amount._hex) / 10 ** 18, //the number would be seconds, so you need to change to milliseconds
+          amount: parseInt(transaction.amount._hex) / 10 ** 18, //the value uint would be subunit wei after converting from hex to Int, then need to divide 10**18 to convert to unit Eth.
         })
       );
       // console.log(structuredTransactions);
